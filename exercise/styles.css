@@ -1,57 +1,133 @@
 body {
-    font-family: Arial, Helvetica, sans-serif;
-    background-color: #87CEEB;
+  font-family: Arial, Helvetica, sans-serif;
+  background-color: #87ceeb;
 }
 
 nav ul {
-    margin: 0;
-    padding: 20px 0 0 0;
+  margin: 0;
+  padding: 20px 0 0 0;
 }
 
 nav ul li {
-    list-style: none;
-    width: 30%;
-    background-color: #00afef;
-    border-radius: 5px;
-    text-align: center;
-    line-height: 50px;
+  list-style: none;
+  width: 30%;
+  background-color: #00afef;
+  border-radius: 5px;
+  text-align: center;
+  line-height: 50px;
+  font-weight: bold;
 }
 
 header img {
-    height: 100px;
-    width: auto;
+  height: 100px;
+  width: auto;
 }
 header h1 {
-    padding-left: 20px;
-    padding-top: 10px;
+  padding-left: 20px;
+  padding-top: 10px;
 }
 
 main img {
-    object-fit: cover;
-    margin-right: 20px;
-    height: 350px;
-    width: 35%;
+  object-fit: cover;
+  margin-right: 20px;
+  height: 350px;
+  width: 35%;
 }
 
 main li:before {
-    content: '🍡';
-    margin-left: -31px;
-    padding-right: 8px;
+  content: "🍡";
+  margin-left: -31px;
+  padding-right: 8px;
 }
 
-main, section, footer {
-    background-color: #ffffff;
-    border-radius: 5px;
-    padding: 20px;
+main,
+section,
+footer {
+  background-color: #ffffff;
+  border-radius: 5px;
+  padding: 20px;
 }
 
-.store-button { /* used for store link in "Get refreshed" section */
-    width: 25%;
-    padding: 10px;
-    border-radius: 5px;
-    color: #000000;
-    background-color: #00afef;
-    font-weight: bold;
-    text-align: center;
-    text-transform: uppercase;
+.store-button {
+  /* used for store link in "Get refreshed" section */
+  width: 25%;
+  padding: 10px;
+  border-radius: 5px;
+  color: #000000;
+  background-color: #00afef;
+  font-weight: bold;
+  text-align: center;
+  text-transform: uppercase;
+}
+body {
+  row-gap: 5px;
+  column-gap: 5px;
+  display: grid;
+  height: 100vh;
+  grid-template-columns: 1fr 1fr;
+  grid-template-rows: 8% 1fr 1fr 5%;
+  grid-template-areas:
+    "header header"
+    "main main"
+    "popsicle gift"
+    "footer footer";
+}
+
+header {
+  display: flex;
+  justify-content: space-between;
+  grid-area: header;
+}
+nav ul {
+  display: flex;
+  justify-content: space-between;
+}
+
+main {
+  align-items: center;
+  grid-area: main;
+}
+#popsicle {
+  grid-area: popsicle;
+}
+#gift {
+  grid-area: gift;
+  flex-direction: column;
+  align-items: center;
+}
+footer {
+  grid-area: footer;
+}
+header div,
+nav ul,
+main,
+#popsicle,
+#gift {
+  display: flex;
+}
+main li {
+  list-style: none;
+}
+#popsicle div {
+  align-self: center;
+}
+@media screen and (max-width: 800px) {
+  body {
+    grid-template-columns: 1fr;
+    grid-template-rows: 10% 2fr 1fr 1fr 5%;
+    grid-template-areas:
+      "header"
+      "main"
+      "popsicle"
+      "gift"
+      "footer";
+  }
+  main {
+    flex-direction: column;
+  }
+  main img {
+    height: auto;
+    width: 100%;
+    object-fit: contain;
+  }
 }

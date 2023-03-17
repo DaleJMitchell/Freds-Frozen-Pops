@@ -1,0 +1,9 @@
+body {
+  grid-template-rows: 10% 1fr 5%;
+  grid-template-columns: 1fr;
+  grid-template-areas:
+    "header"
+    "main"
+    "footer";
+  height: 100vh;
+}
