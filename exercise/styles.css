@@ -63,9 +63,11 @@ body {
   row-gap: 5px;
   column-gap: 5px;
   display: grid;
-  height: 100vh;
+  /*commented out this line*/
+  /* height: 100vh; */
   grid-template-columns: 1fr 1fr;
-  grid-template-rows: 8% 1fr 1fr 5%;
+  /*commented out this line*/
+  /* grid-template-rows: 8% 1fr 1fr 5%; */
   grid-template-areas:
     "header header"
     "main main"
@@ -82,11 +84,17 @@ nav ul {
   display: flex;
   justify-content: space-between;
 }
+nav ul li {
+  width: 200px;
+  margin: 0 10px;
+  text-transform: uppercase; /*added this line*/
+}
 
 main {
   align-items: center;
   grid-area: main;
 }
+
 #popsicle {
   grid-area: popsicle;
 }
@@ -95,6 +103,15 @@ main {
   flex-direction: column;
   align-items: center;
 }
+section h2 {
+  text-align: center;
+}
+section > div {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+}
+
 footer {
   grid-area: footer;
 }
