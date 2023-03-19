@@ -1,3 +1,5 @@
+/*commented out  lines below*/
+/*
 body {
   grid-template-rows: 10% 1fr 5%;
   grid-template-columns: 1fr;
@@ -5,5 +7,32 @@ body {
     "header"
     "main"
     "footer";
-  height: 100vh;
+  height: 100vh; 
+}*/
+
+/*Added by Dale*/
+#contact-form h2 {
+  text-align: left;
+}
+
+form label {
+  line-height: 1.5;
+}
+form input,
+form select,
+form textarea {
+  margin-bottom: 15px;
+}
+form input,
+form select,
+#color {
+  width: 275px;
+}
+#submit {
+  background-color: #00afef;
+  color: #fff;
+  border: none;
+  border-radius: 5px;
+  padding: 10px 0;
+  font-weight: bold;
 }
