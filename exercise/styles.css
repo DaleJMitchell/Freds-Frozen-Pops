@@ -30,7 +30,7 @@ header h1 {
 main img {
   object-fit: cover;
   margin-right: 20px;
-  height: 350px;
+  height: auto;
   width: 35%;
 }
 
@@ -80,6 +80,9 @@ header {
   justify-content: space-between;
   grid-area: header;
 }
+nav {
+  flex-basis: 50%;
+}
 nav ul {
   display: flex;
   justify-content: space-between;
@@ -88,6 +91,7 @@ nav ul li {
   width: 200px;
   margin: 0 10px;
   text-transform: uppercase; /*added this line*/
+  flex-basis: 33%;
 }
 
 main {
@@ -97,6 +101,10 @@ main {
 
 #popsicle {
   grid-area: popsicle;
+}
+#popsicle img {
+  height: auto;
+  width: 10%;
 }
 #gift {
   grid-area: gift;
@@ -139,12 +147,13 @@ main li {
       "gift"
       "footer";
   }
+  header {
+    flex-direction: column;
+  }
   main {
     flex-direction: column;
   }
   main img {
-    height: auto;
     width: 100%;
-    object-fit: contain;
   }
 }
